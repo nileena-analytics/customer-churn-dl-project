@@ -30,4 +30,5 @@ model=Sequential([
 
 model.compile(optimizer = 'adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(x_train,y_train, epochs= 30, batch_size= 13, validation_split= 0.2, verbose= 1)
-model.save('model/churn_model.h5')
+model.save('models/churn_model.h5')
+pd.to_pickle(scaler,'.model/scler.pkl')
